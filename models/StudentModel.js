@@ -1,5 +1,5 @@
 import { DataTypes } from 'sequelize/types';
-import { db } from '../db/db';
+import { db } from '../db/db.js';
 
 export const StudentModel = db.define('students', {
   idST: { type: DataTypes.INTEGER, primaryKey: true },
