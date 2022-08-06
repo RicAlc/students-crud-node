@@ -1,8 +1,8 @@
-import { StudentModel } from '../models/StudentModel.js';
+import StudentModel from '../models/StudentModel.js';
 
 export const getAllStudents = async (req, res) => {
   try {
-    const students = await StudentModel.findAll();
+    const students = await StudentModel.findAll({ raw: true });
     res.status(200).json(students);
   } catch (error) {
     res.status(404).json({
