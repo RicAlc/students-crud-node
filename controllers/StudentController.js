@@ -13,8 +13,8 @@ export const getAllStudents = async (req, res) => {
 
 export const getStudent = async (req, res) => {
   try {
-    const student = await StudentModel.findOne({
-      where: { idST: req.paramas.id },
+    const student = await StudentModel.findAll({
+      where: { idST: req.params.id },
     });
     res.status(200).json(student);
   } catch (error) {

@@ -9,10 +9,10 @@ import {
 
 const userRouter = express.Router();
 
-router.get('/', getAllStudents);
-router.get('/:id', getStudent);
-router.post('/', createStudent);
-router.put('/:id', updateStudent);
-router.delete('/:id', deleteStudent);
+userRouter.get('/', getAllStudents);
+userRouter.get('/:id', getStudent);
+userRouter.post('/', createStudent);
+userRouter.put('/:id', updateStudent);
+userRouter.delete('/:id', deleteStudent);
 
 export default userRouter;
