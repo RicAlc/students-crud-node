@@ -1,5 +1,7 @@
 import StudentModel from '../models/StudentModel.js';
 
+// Metodos HTTP
+// Metodo GET de todos los estudiantes
 export const getAllStudents = async (req, res) => {
   try {
     const students = await StudentModel.findAll({ raw: true });
@@ -11,6 +13,7 @@ export const getAllStudents = async (req, res) => {
   }
 };
 
+// Metodo GET de un solo estudiante
 export const getStudent = async (req, res) => {
   try {
     const student = await StudentModel.findAll({
@@ -24,6 +27,7 @@ export const getStudent = async (req, res) => {
   }
 };
 
+// Metodo POST de creacion de un estudiante
 export const createStudent = async (req, res) => {
   try {
     await StudentModel.create(req.body);
@@ -37,6 +41,7 @@ export const createStudent = async (req, res) => {
   }
 };
 
+// Metodo PUT de un solo estudiante
 export const updateStudent = async (req, res) => {
   try {
     await StudentModel.update(req.body, { where: { idST: req.params.id } });
@@ -50,6 +55,7 @@ export const updateStudent = async (req, res) => {
   }
 };
 
+// Metodo DELETE de un estudiante
 export const deleteStudent = async (req, res) => {
   try {
     await StudentModel.destroy({ where: { idST: req.params.id } });
