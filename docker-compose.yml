@@ -1,0 +1,23 @@
+version: "3.9"
+services:
+  node-app:
+    build: .
+    ports:
+      - "3000:3000"
+    links:
+      - mysql-app
+  mysql-app:
+    image: mysql:8
+    restart: always
+    expose:
+      - "3306"
+    ports:
+      - "3306:3306"
+    volumes:
+      - ~apps/mysql-data:/var/lib/mysql
+    environment:
+      - MYSQL_DATABASE=schoolDB
+      - MYSQL_ROOT_PASSWORD=pa55word
+
+volumes:
+  mysql-data:
