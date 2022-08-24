@@ -14,13 +14,13 @@ app.use('/students', userRouter);
 // Conexion a la base de datos
 try {
   await db.authenticate();
-  console.log('Conexion a la DB exitosa22');
+  console.log('Conexion a la DB exitosa');
 } catch (error) {
   console.error(`Error en la conexion:${error}`);
 }
 await StudentModel.sync()
-  .then((result) => {
-    console.log(result);
+  .then(() => {
+    console.log('Tabla creada con exito');
   })
   .catch((error) => {
     console.log(error);
