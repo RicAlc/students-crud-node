@@ -1,6 +1,7 @@
 # (CRUD) Student regitration - Node
 
-This is the back-end build of Student registration CRUD; the project register, modify, and delete data from students in the DB
+This is the back-end build for a student registration CRUD project; the project read, register, modify and delete data from a students DB
+
 
 ## The challenge ✅
 
